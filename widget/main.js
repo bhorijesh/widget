@@ -16,11 +16,11 @@ let accessProProxyHandle,
 
 
 if (accessProDevMode) {
-    accessProProxyHandle = 'https://4b0911a2f069.ngrok-free.app/widget';
-    accessProStaticPath = `https://4b0911a2f069.ngrok-free.app/widget`;
+    accessProProxyHandle = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
+    accessProStaticPath = `https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget`;
 } else {
-    accessProProxyHandle = 'https://4b0911a2f069.ngrok-free.app/widget';
-    accessProStaticPath = 'https://4b0911a2f069.ngrok-free.app/widget';
+    accessProProxyHandle = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
+    accessProStaticPath = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
 }
 
 // if (accessProDevMode) {
