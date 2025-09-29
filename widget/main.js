@@ -16,11 +16,11 @@ let accessProProxyHandle,
 
 
 if (accessProDevMode) {
-    accessProProxyHandle = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
-    accessProStaticPath = `https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget`;
+    accessProProxyHandle = 'http://localhost:3000/api';
+    accessProStaticPath = `http://localhost:1337/widget`;
 } else {
-    accessProProxyHandle = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
-    accessProStaticPath = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
+    accessProProxyHandle = 'http://localhost:1337/widget';
+    accessProStaticPath = 'http://localhost:1337/widget';
 }
 
 // if (accessProDevMode) {
@@ -50,7 +50,7 @@ accessProGoogleLangsScript = `${accessProStaticPath}/acp-languages.js`;
 
 
 // URLs
-const accessProSettingsUrl = `${accessProProxyHandle}/widget/settings/theme/`;
+const accessProSettingsUrl = `${accessProProxyHandle}/widget-settings/public`;
 const accessProPageViewsCountUrl = `${accessProProxyHandle}/pageviews/reduce/`;
 
 // Translation URL
@@ -330,25 +330,25 @@ class AccessProIcon {
 
     // Fetch the config from the server
     async fetchConfig() {
-        return {
-            success: true,
-            data: {
-                // ...data.data?.data || {},
-                compliance: {
-                    // compliance_title: data.data?.compliance_title || "Accessibility Menu",
-                    // compliance_content: data.data?.compliance_content || ACCESSPRO_COMPLIANCE_STATEMENT,
-                }
-            }
+        // return {
+        //     success: true,
+        //     data: {
+        //         // ...data.data?.data || {},
+        //         compliance: {
+        //             // compliance_title: data.data?.compliance_title || "Accessibility Menu",
+        //             // compliance_content: data.data?.compliance_content || ACCESSPRO_COMPLIANCE_STATEMENT,
+        //         }
+        //     }
 
-        }
+        // }
         try {
             const tokens = this.aswGetKeys();
             aswAuthTokens = tokens;
             const { key, domain } = tokens;
-            if (!key || !domain) {
-                return;
-            }
-            const response = await fetch(`${accessProSettingsUrl}?key=${key}&domain=${domain}`, {
+            // if (!key || !domain) {
+            //     return;
+            // }
+            const response = await fetch(`${accessProSettingsUrl}?userId=usr_123&siteId=site_456`, {
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -623,3 +623,4 @@ class AccessProIcon {
 
 // Create an instance of the icon
 const iconInstance = new AccessProIcon();
+
