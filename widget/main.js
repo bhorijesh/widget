@@ -348,7 +348,7 @@ class AccessProIcon {
             // if (!key || !domain) {
             //     return;
             // }
-            const response = await fetch(`${accessProSettingsUrl}?userId=usr_123&siteId=site_456`, {
+            const response = await fetch(`${accessProSettingsUrl}?userId=68badd219a2483f17b294a91&siteId=68baddb238459541135137d2`, {
                 headers: {
                     "Content-Type": "application/json",
                 },
