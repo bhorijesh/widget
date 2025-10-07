@@ -16,11 +16,11 @@ let accessProProxyHandle,
 
 
 if (accessProDevMode) {
-    accessProProxyHandle = 'http://localhost:3000/api';
-    accessProStaticPath = `http://localhost:1337/widget`;
+    accessProProxyHandle = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
+    accessProStaticPath = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
 } else {
-    accessProProxyHandle = 'http://localhost:1337/widget';
-    accessProStaticPath = 'http://localhost:1337/widget';
+    accessProProxyHandle = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
+    accessProStaticPath = 'https://cdn.jsdelivr.net/gh/bhorijesh/widget/widget';
 }
 
 // if (accessProDevMode) {
